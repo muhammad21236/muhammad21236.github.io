@@ -247,3 +247,81 @@ h1 { font-size:clamp(58px,8vw,94px); letter-spacing:-.085em; line-height:1.05; m
 @media (prefers-reduced-motion:reduce) {
   *,*::before,*::after { scroll-behavior:auto!important; animation-duration:.01ms!important; animation-iteration-count:1!important; transition-duration:.01ms!important; }
 }
+
+
+/* Featured AWS certification */
+.cert-featured {
+  position: relative;
+  align-items: center;
+  gap: 19px;
+  padding: 24px 25px;
+  border: 1px solid color-mix(in srgb, var(--accent) 48%, var(--line));
+  background:
+    radial-gradient(ellipse at 0% 50%, color-mix(in srgb, var(--accent) 13%, transparent), transparent 58%),
+    linear-gradient(110deg, color-mix(in srgb, var(--accent) 7%, var(--surface-solid)), var(--surface));
+  box-shadow: 0 12px 36px color-mix(in srgb, var(--accent) 8%, transparent);
+}
+.cert-featured .cert-seal {
+  width: 58px;
+  height: 58px;
+  flex: 0 0 58px;
+  border-radius: 15px;
+  background: linear-gradient(145deg, #f6b83f, #e58b20);
+  color: #18243a;
+  font-family: var(--mono);
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: -.06em;
+  box-shadow: 0 7px 20px rgba(229, 139, 32, .2);
+}
+.cert-featured .cert-details {
+  display: grid;
+  gap: 4px;
+  flex: 1;
+}
+.cert-featured .fact-label {
+  color: var(--accent);
+  font-size: 9px;
+  font-weight: 500;
+}
+.cert-featured strong {
+  font-size: 15px;
+  letter-spacing: -.025em;
+}
+.cert-featured small {
+  color: var(--muted);
+  font-size: 10px;
+}
+.cert-verify {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  width: fit-content;
+  margin-top: 9px;
+  padding: 9px 13px;
+  border: 1px solid color-mix(in srgb, var(--accent) 55%, var(--line));
+  border-radius: 7px;
+  color: var(--accent);
+  font-size: 10px;
+  font-weight: 800;
+  transition: background .2s, color .2s, transform .2s;
+}
+.cert-verify:hover {
+  background: var(--accent);
+  color: #071a19;
+  transform: translateY(-2px);
+}
+.cert-verify span {
+  font-size: 14px;
+}
+.cert-featured .cert-arrow {
+  align-self: flex-start;
+  color: #e8ae43;
+  font-size: 23px;
+}
+@media (max-width: 520px) {
+  .cert-featured { align-items: flex-start; padding: 19px 16px; gap: 13px; }
+  .cert-featured .cert-seal { width: 45px; height: 45px; flex-basis: 45px; border-radius: 12px; font-size: 12px; }
+  .cert-featured strong { font-size: 12px; }
+  .cert-featured .cert-arrow { display: none; }
+}
